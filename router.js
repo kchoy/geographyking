@@ -30,7 +30,7 @@ handler["/index"] = handler["/"];
 ///////this handles the routing of the different pages
 function route(path, response){
 	if(typeof handler[path] === 'function'){
-		console.log("Call for " + path);
+		//console.log("Call for " + path);
 		handler[path](response);
 	} else {
 		response.writeHead(404, {"Content-Type": "text/plain"});
