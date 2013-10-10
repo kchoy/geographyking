@@ -6,34 +6,23 @@ var fs = require('fs');
 var handler = {};
 //this is where all the different url handler function calls go
 handler["/maptest"] = function mapTest(response){
-	/*var reader = new FileReader();
-
-	var fh = fopen('./maptest.html', 0);
-	if(fh != -1){
-		response.writeHead(200, {"Content-Type": "text/html"});
-		var length = flength(fh);
-		response.write(fread(fh, length));;
-		fclose(fh);
-		response.end()
-	} else {
-		response.writeHead(404, {"Content-Type": "text/plain"});
-		response.write("404 Error, Page Not Found");
-		response.end();
-	}*/
-
 	var buff = fs.readFileSync('./maptest.html');
 	var data = buff.toString("utf8", 0, buff.length)
 
 	response.writeHead(200, {"Content-Type": "text/html"});
 	response.write(data);
 	response.end();
-
 }
 
+handler["/"] = function index(response){
+	var buff = fs.readFileSync('./index.html');
+	var data = buff.toString("utf8", 0, buff.length)
 
-function dataLoaded(err, data){
-	return data;
+	response.writeHead(200, {"Content-Type": "text/html"});
+	response.write(data);
+	response.end();
 }
+handler["/index"] = handler["/"];
 
 
 
@@ -41,7 +30,7 @@ function dataLoaded(err, data){
 ///////this handles the routing of the different pages
 function route(path, response){
 	if(typeof handler[path] === 'function'){
-		console.log(path)
+		console.log("Call for " + path);
 		handler[path](response);
 	} else {
 		response.writeHead(404, {"Content-Type": "text/plain"});
