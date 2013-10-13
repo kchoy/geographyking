@@ -1,0 +1,10 @@
+#header, #game, #howto, #about{
+	min-width: 100%;
+	margin: -10px;
+}
+
+
+#howtopic, #howtotext{
+	position: relative;
+	margin: 20px;
+}
