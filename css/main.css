@@ -10,13 +10,58 @@ body, html{
 }
 
 #background{
-	position: fixed;
+	min-height: 100%;
+	min-width: 1024px;
+
 	width: 100%;
+	height: auto;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
 	z-index: -999;
+	background-repeat: repeat-x;
+}
+
+@media screen and (max-width: 1024px) {
+	#background{
+		left: 50%;
+		margin-left: -512px;
+	}
 }
 
 #play{
 	position: relative;
 	margin-top: 10px;
 	margin-left: -10px;
+}
+
+#left{
+	position: relative;
+	margin-top: 14%;
+}
+
+#play,#left,#right,#arrow{
+	cursor: pointer;
+}
+
+#arrow{
+	position: relative;
+	margin-top: -1%;
+}
+
+#right{
+	position: relative;
+	margin-top: -15%;
+}
+
+img:hover{
+	opacity: 1.0;
+}
+
+#about{
+	position: absolute;
+	top: 5%;
+	left: 10%;
 }

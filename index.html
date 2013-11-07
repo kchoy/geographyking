@@ -12,22 +12,33 @@
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <!--Adding in Google Fonts API !
     font-family: 'Sniglet', cursive; !-->
-    <script type='text/javascript' src='javascript.js'></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="loadjquery.js"></script>
+    <script type='text/javascript' src='javascript.js'></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed' rel='stylesheet' type='text/css'>
 
 
 
-    <body>
-        <img alt="background" src="pics/wave.jpg" id="background"/>    
-        <center><img src="pics/smain.png" id="logo"></center>
-        <center><img src="pics/mainarrow2.png" id="arrow"></center>
-        <center><p style="font-size: 36px" id="play">Play</p></center>
+    <body data-type="bakcground" data-speed="10">
 
-
-
+        <img alt="background" src="pics/wave.jpg" id="background">
+        <center><img src="pics/smain2.png" id="logo" cursor="pointer"></center>
+        <center><img src="pics/mainarrow.png" id="arrow"></center>
+        <center><p style="font-size: 36px" id="play">Play Game</p></center>
+        <img src="pics/right.png" id="right" align="right">
+        <img src="pics/left.png" id="left" align="left">
 
     </body>
+
+
+
+    <div id="about" data-type="background" data-speed="10">
+        <center><h1>About the Game</h1></center>
+        <p>Coming Soon!</p>
+    </div>
+
+    
+
     </div>
 
 </html>
