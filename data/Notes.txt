@@ -1,0 +1,4 @@
+https://www.census.gov/geo/maps-data/data/gazetteer2010.html - zip code (everything but city)
+http://notebook.gaslampmedia.com/download-zip-code-latitude-longitude-city-state-county-csv/ - (everything but population)
+
+JOIN on zip code
