@@ -15,7 +15,7 @@ $(document).ready(function()
 		$("#left, #right, #arrow, #play").mouseleave(function(){
 			$(this).animate({opacity:"0.5"});
 			});
-
+/*
 
 	$("#right").click(function(){
 		//$("#play, #arrow, #logo").animate({opacity: "0.0"}, 500);
@@ -33,4 +33,7 @@ $(document).ready(function()
 		$("#right").show(500);
 	});
 
+
+	*/
+	
 });
